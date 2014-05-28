@@ -8,6 +8,13 @@
     "difference-of-squares",
     "bob",
     "space-age",
-    "gigasecond"
+    "gigasecond",
+    "triangle"
+  ],
+  "deprecated": [
+
+  ],
+  "ignore": [
+
   ]
 }
