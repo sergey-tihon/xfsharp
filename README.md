@@ -6,6 +6,10 @@ Exercism exercises in F#
 
 Please see the [contributing guide](https://github.com/exercism/x-api/blob/master/CONTRIBUTING.md#the-exercise-data)
 
+## Support
+
+* .NET - [![Windows CI Build status](https://ci.appveyor.com/api/projects/status/irkbbn5ryc7wdtur67ts "Build Status")](https://ci.appveyor.com/project/jwood803/xfsharp)
+
 ## License
 
 The MIT License (MIT)
