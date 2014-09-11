@@ -3,8 +3,6 @@ open System.IO
 open Fake
 open Fake.FileSystemHelper
 open Fake.FscHelper
-
-let nunitDll = "packages\NUnit.Runners\tools\lib\nunit.core.dll"
 let allDirs = DirectoryInfo(__SOURCE_DIRECTORY__).GetDirectories "*"
 let currentDir = DirectoryInfo(__SOURCE_DIRECTORY__ + "\\" + allDirs.[2].Name)
 
@@ -14,8 +12,8 @@ let exampleFiles =
         |> Array.toList
 
 Target "Default" (fun _ ->
-    exampleFiles |> Fsc(fun param -> { param with References = [nunitDll]
-                                                  FscTarget = Library })
+    exampleFiles |> Fsc(fun param -> { param with FscTarget = Library
+                                                  Output = "Example.dll" })
 )
 
 RunTargetOrDefault "Default"
