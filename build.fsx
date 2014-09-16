@@ -15,7 +15,7 @@ let exampleFiles = allDirs |> Array.map(fun i -> i.FullName) |> Array.toList
 let first = [exampleFiles.Head]
 
 Target "Default" (fun _ ->
-    first |> Fsc(fun param -> param)
+    first |> Fsc(fun param -> { param with FscTarget = Library })
 )
 
 RunTargetOrDefault "Default"
