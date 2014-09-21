@@ -6,4 +6,4 @@ if not exist packages\FAKE\tools\Fake.exe (
 if not exist packages\NUnit.Runners\tools\nunit-console.exe (
   .nuget\nuget.exe install NUnit.Runners -OutputDirectory packages -ExcludeVersion
 )
-packages\FAKE\tools\FAKE.exe build.fsx %*
+packages\FAKE\tools\FAKE.exe build.fsx %* 2>&1
